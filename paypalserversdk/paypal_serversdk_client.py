@@ -16,11 +16,15 @@ from paypalserversdk.http.auth.o_auth_2 import OAuth2
 from paypalserversdk.controllers.orders_controller import OrdersController
 from paypalserversdk.controllers.payments_controller import PaymentsController
 from paypalserversdk.controllers.vault_controller import VaultController
+from paypalserversdk.controllers.transactions_controller import TransactionsController
 from paypalserversdk.controllers.o_auth_authorization_controller\
     import OAuthAuthorizationController
 
 
 class PaypalServersdkClient(object):
+    @LazyProperty
+    def transactions(self):
+        return TransactionsController(self.global_configuration)
     @LazyProperty
     def orders(self):
         return OrdersController(self.global_configuration)
