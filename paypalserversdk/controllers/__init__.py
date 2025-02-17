@@ -4,4 +4,5 @@ __all__ = [
     'payments_controller',
     'vault_controller',
     'o_auth_authorization_controller',
+    'transactions_controller',
 ]
