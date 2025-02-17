@@ -13,7 +13,7 @@ from paypalserversdk.models.network_transaction_reference import NetworkTransact
 from paypalserversdk.models.seller_protection import SellerProtection
 
 
-class TransactionsDetails(object):
+class TransactionDetails(object):
 
     """Implementation of the 'Transaction Detail' model.
 
@@ -26,11 +26,11 @@ class TransactionsDetails(object):
 
     # Create a mapping from Model property names to API property names
     _names = {
-        "transactions_details": 'transactions_details',
+        "transaction_details": 'transaction_details',
     }
 
     _optionals = [
-        "transactions_details",
+        "transaction_details",
     ]
 
     def __init__(self,
@@ -61,7 +61,7 @@ class TransactionsDetails(object):
             return None
 
         # Extract variables from the dictionary
-        transactions_details = dictionary.get("transactions_details") if dictionary.get("transactions_details") else APIHelper.SKIP
+        transactions_details = dictionary.get("transaction_details") if dictionary.get("transaction_details") else APIHelper.SKIP
     
         # Return an object of this model
         return cls(transactions_details,
