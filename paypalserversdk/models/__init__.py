@@ -114,7 +114,7 @@ __all__ = [
     'tax_info',
     'three_d_secure_authentication_response',
     'token',
-    'transactions_details',
+    'transaction_details',
     'order_tracker_response',
     'order_tracker_item',
     'trustly_payment_object',

@@ -16,7 +16,7 @@ from apimatic_core.response_handler import ResponseHandler
 from apimatic_core.types.parameter import Parameter
 from paypalserversdk.http.http_method_enum import HttpMethodEnum
 from apimatic_core.authentication.multiple.single_auth import Single
-from paypalserversdk.models.transactions_details import TransactionsDetails
+from paypalserversdk.models.transactions_details import TransactionDetails
 from paypalserversdk.models.captured_payment import CapturedPayment
 from paypalserversdk.models.refund import Refund
 from paypalserversdk.exceptions.error_exception import ErrorException
@@ -116,7 +116,7 @@ class TransactionsController(BaseController):
         ).response(
             ResponseHandler()
             .deserializer(APIHelper.json_deserialize)
-            .deserialize_into(TransactionsDetails.from_dictionary)
+            .deserialize_into(TransactionDetails.from_dictionary)
             .is_api_response(True)
             .local_error('401',
                          'Authentication failed due to missing authorization header, or invalid authentication credentials.',
