@@ -64,5 +64,5 @@ class TransactionsDetails(object):
         transactions_details = dictionary.get("transactions_details") if dictionary.get("transactions_details") else APIHelper.SKIP
     
         # Return an object of this model
-        return cls(status,
+        return cls(transactions_details,
                    )
